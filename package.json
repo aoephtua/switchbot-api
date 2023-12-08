@@ -1,0 +1,27 @@
+{
+  "name": "switchbot-api",
+  "version": "1.0.0",
+  "description": "Node.js library to communicate with official SwitchBot API",
+  "main": "./src/index.mjs",
+  "type": "module",
+  "scripts": {
+    "example_01_getDeviceStatus": "node examples/01_getDeviceStatus.mjs",
+    "example_02_getScenes": "node examples/02_getScenes.mjs",
+    "example_03_executeScene": "node examples/03_executeScene.mjs",
+    "example_04_setBlindTiltPosition": "node examples/04_setBlindTiltPosition.mjs"
+  },
+  "author": "Thorsten A. Weintz",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:aoephtua/switchbot-api.git"
+  },
+  "keywords": [
+    "SwitchBot",
+    "Blind Tilt",
+    "Smart Home"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.2"
+  }
+}
