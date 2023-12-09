@@ -37,5 +37,29 @@ export default class SwitchBotBlindTilt extends SwitchBotDevice {
      * 
      * @returns Object with command status and identifier.
      */
-    closeDown = () => this.setPosition('down');
+    closeDown = () => this.executeDeviceCommand('closeDown');
+
+    /** 
+     * Error: closeDown = () => this.setPosition('down');
+     * 
+     * POST request:
+     * https://api.switch-bot.com/v1.1/devices/:deviceId/commands
+     * {
+     *   commandType: 'command',
+     *   command: 'setPosition',
+     *   parameter: 'down;0'
+     * }
+     * 
+     * Response body:
+     * {
+     *   statusCode: 400,
+     *   body: {},
+     *   message: 'ExpressionAttributeValues contains invalid value: The parameter cannot be converted to a numeric value: NaN for key :dataItem'
+     * }
+     * 
+     * Diagnosis: Server-side error
+     * 
+     * Issue:
+     * https://github.com/OpenWonderLabs/SwitchBotAPI/issues/176
+     */
 }
