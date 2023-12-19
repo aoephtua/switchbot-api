@@ -16,7 +16,9 @@ export default class SwitchBotBlindTilt extends SwitchBotDevice {
      * @returns Object with command status and identifier.
      */
     setPosition = (direction, position) =>
-        this.executeDeviceCommand('setPosition', `${direction};${position || 0}`);
+        direction === 'down' && !position
+            ? this.closeDown()
+            : this.executeDeviceCommand('setPosition', `${direction};${position || 0}`);
 
     /**
      * Sets the position of Blind Tilt to open.
