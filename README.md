@@ -15,7 +15,10 @@ Using npm:
 Once the package is installed, you can import the classes:
 
 ```javascript
-import SwitchBotApi, { SwitchBotBlindTilt } from 'switchbot-api';
+import SwitchBotApi, {
+    SwitchBotDevice,
+    SwitchBotBlindTilt
+} from 'switchbot-api';
 ```
 
 ## Usage

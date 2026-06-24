@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE in the project root for license information.
 
 import SwitchBotApi from './switchBotApi.mjs';
+import SwitchBotDevice from './switchBotDevice.mjs';
 import SwitchBotBlindTilt from './devices/switchBotBlindTilt.mjs';
 
 /**
@@ -13,5 +14,6 @@ export default SwitchBotApi;
  * Exports SwitchBot devices.
  */
 export {
+    SwitchBotDevice,
     SwitchBotBlindTilt
 };
